@@ -1,0 +1,76 @@
+site_name: Hectic
+site_author: Shakshi3104
+site_description: Documentation of Hectic (flower and blossom)
+repo_name: 'GitHub'
+repo_url: https://github.com/haselab-dev/Hectic
+
+nav:
+    - Home: index.md
+    - flower: refs/flower.md
+    - blossom: refs/blossom.md
+    - Quickstart: quickstart.md
+
+#plugins:
+#    - search
+#    - mkdocstrings:
+#        default_handler: python
+#        handlers:
+#            python:
+#                setup_commands:
+#                    - import sys
+#                    - sys.path.append('../../')
+#                selection:
+#                    docstring_style: numpy
+#                rendering:
+#                    show_source: false
+#                    show_root_heading: true
+#                    show_root_full_path: false
+#                    show_category_heading: false
+#                    heading_level: 2
+
+# readthedocs
+# theme:
+#   name: readthedocs
+#   locale: en
+#   highlightjs: true
+#   include_sidebar: false
+
+# material
+theme:
+    name: material
+    language: ja
+
+    # これ入れるとブラウザでエラーが出る
+    # features:
+    #     tabs: true
+
+#extra_javascript:
+#    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+#    - mdx_math
+    - pymdownx.highlight:
+        linenums: true
+    - pymdownx.superfences
+
+    # Noteとか警告文とか
+    - admonition
+
+    # 注釈
+    - footnotes
+
+    # 絵文字
+    - pymdownx.emoji
+
+    # Webアイコンフォント(要インストール)
+    # - fontawesome_markdown
+
+# bootstrap4
+# theme:
+#     name: bootstrap4
+#     suppress_nextprev: true
+
+# cinder
+# theme:
+#     name: null
+#     custom_dir: 'cinder-1.2.0/cinder'
