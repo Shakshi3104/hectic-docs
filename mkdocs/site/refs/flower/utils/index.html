@@ -220,6 +220,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         flower
       </a>
@@ -237,21 +252,6 @@
     <li class="md-nav__item">
       <a href="../../blossom/" class="md-nav__link">
         blossom
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../quickstart/" class="md-nav__link">
-        Quickstart
       </a>
     </li>
   
@@ -289,6 +289,13 @@
   
     <nav class="md-nav" aria-label="SupportedModel">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#build_model" class="md-nav__link">
@@ -331,6 +338,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#aliases_1" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#module" class="md-nav__link">
     module()
   </a>
@@ -360,6 +374,19 @@
     SupportedDataset
   </a>
   
+    <nav class="md-nav" aria-label="SupportedDataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases_2" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -381,6 +408,9 @@
                 
                 <h1 id="flowerutils">flower.utils</h1>
 <h2 id="supportedmodel">SupportedModel</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedModel</span>
+</code></pre></div>
+</td></tr></table>
 <ul>
 <li>case <code>SimpleCNN</code></li>
 <li>case <code>VGG16</code></li>
@@ -397,6 +427,8 @@
 <li>case <code>EfficientNetB0</code></li>
 <li>case <code>EfficientNetLite0</code></li>
 </ul>
+<h4 id="aliases">Aliases</h4>
+<p><code>flower.SupportedModel</code></p>
 <h3 id="build_model">build_model()</h3>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SupportedModel</span><span class="o">.</span><span class="n">build_model</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">classes</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">submodule</span><span class="p">:</span> <span class="n">SupportedSubmodule</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">concat_hcf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">num_features</span><span class="o">=</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">25</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span>
 </code></pre></div>
@@ -415,6 +447,9 @@
 <li>model: tf.keras.models.Model</li>
 </ul>
 <h2 id="supportedsubmodule">SupportedSubmodule</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedSubmodule</span>
+</code></pre></div>
+</td></tr></table>
 <p>Attention modules</p>
 <ul>
 <li>case <code>SENet</code></li>
@@ -427,6 +462,8 @@
 <li>case <code>LSTM</code></li>
 <li>case <code>bi-LSTM</code></li>
 </ul>
+<h4 id="aliases_1">Aliases</h4>
+<p><code>flower.SupportedSubmodule</code></p>
 <h3 id="module">module()</h3>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SupportedSubmodule</span><span class="o">.</span><span class="n">module</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">flower</span><span class="o">.</span><span class="n">hydrangea</span><span class="o">.</span><span class="n">attention</span><span class="o">.</span><span class="n">BaseAttention</span>
 </code></pre></div>
@@ -437,12 +474,17 @@ Attentionモジュールをビルドする (<code>SupportedModel.build_model()</
 <li>module: flower.hydrangea.attention.BaseAttention</li>
 </ul>
 <h2 id="supporteddataset">SupportedDataset</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedDataset</span>
+</code></pre></div>
+</td></tr></table>
 <ul>
 <li>case <code>HASC</code></li>
 <li>case <code>WISDM</code></li>
 <li>case <code>UCI</code></li>
 <li>case <code>All</code></li>
 </ul>
+<h4 id="aliases_2">Aliases</h4>
+<p><code>flower.SupportedDataset</code></p>
                 
               
               

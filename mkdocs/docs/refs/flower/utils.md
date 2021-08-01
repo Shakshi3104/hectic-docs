@@ -1,6 +1,11 @@
 # flower.utils
 
 ## SupportedModel
+
+```python
+flower.utils.SupportedModel
+```
+
 - case `SimpleCNN`
 - case `VGG16`
 - case `InceptionV3`
@@ -15,6 +20,10 @@
 - case `MnasNet`
 - case `EfficientNetB0`
 - case `EfficientNetLite0`
+
+
+#### Aliases
+`flower.SupportedModel`
 
 ### build_model()
 ```python
@@ -33,6 +42,11 @@ SupportedModel.build_model(input_shape=(256, 3), classes=6, submodule: Supported
 - model: tf.keras.models.Model
 
 ## SupportedSubmodule
+```python
+flower.utils.SupportedSubmodule
+```
+
+
 Attention modules
 
 - case `SENet`
@@ -45,6 +59,10 @@ RNN modules
 - case `LSTM`
 - case `bi-LSTM`
 
+
+#### Aliases
+`flower.SupportedSubmodule`
+
 ### module()
 ```python
 SupportedSubmodule.module() -> flower.hydrangea.attention.BaseAttention
@@ -55,7 +73,14 @@ Attentionモジュールをビルドする (`SupportedModel.build_model()`内で
 - module: flower.hydrangea.attention.BaseAttention
 
 ## SupportedDataset
+```python
+flower.utils.SupportedDataset
+```
+
 - case `HASC`
 - case `WISDM`
 - case `UCI`
 - case `All`
+
+#### Aliases
+`flower.SupportedDataset`

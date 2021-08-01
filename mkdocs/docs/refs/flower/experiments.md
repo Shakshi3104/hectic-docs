@@ -3,9 +3,14 @@
 ## Flower
 `Flower` is a class for running experiments of this project.
 
+#### Aliases
+`flower.Flower`
+
+`flower.experiments.Flower`
+
 ### Initializer
 ```python
-flower.Flower(model: flower.utils.SupportedModel, module: flower.utils.SupportedSubmodule = None, concat_hcf=False, result_dir="./results/", weight_dir="./weights/", data_dir="./data")
+flower.experiements.architecture.Flower(model: flower.utils.SupportedModel, module: flower.utils.SupportedSubmodule = None, concat_hcf=False, result_dir="./results/", weight_dir="./weights/", data_dir="./data")
 ```
 
 #### Arguments

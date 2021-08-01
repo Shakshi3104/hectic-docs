@@ -218,6 +218,68 @@
 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Quickstart
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flower" class="md-nav__link">
+    Flowerクラスの利用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     <li class="md-nav__item">
       <a href="../refs/flower/" class="md-nav__link">
@@ -242,31 +304,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Quickstart
-      </a>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -286,6 +323,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flower" class="md-nav__link">
+    Flowerクラスの利用
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -302,6 +361,58 @@
                 
                 
                 <h1 id="quick-start">Quick start</h1>
+<p>このページでは<code>flower</code>フレームワークの使い方を紹介します。</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>Hectic (flower &amp; blossom)は、下記のパッケージが必要です。</p>
+<ul>
+<li>tensorflow &gt;= 2.4</li>
+<li><a href="https://github.com/Shakshi3104/tfgarden">tfgarden</a>: <code>pip install git+https://github.com/Shakshi3104/tfgarden.git</code></li>
+<li><a href="https://github.com/haselab-dev/sensorutils">sensorutils</a>: <code>pip install git+https://github.com/haselab-dev/sensorutils.git</code></li>
+<li>numpy</li>
+<li>scipy</li>
+<li>pandas</li>
+</ul>
+<h2 id="flower">Flowerクラスの利用</h2>
+<p><code>flower.Flower</code>クラスを使うことで、HASCデータセットなどの行動認識データセットに対するモデルの推定精度を検証する実験を行うことができます。モデルの指定は<code>SupportedModel</code>、データセットの指定は<code>SupportedDataset</code>を使います。</p>
+<p>下記に示すコードはHASCデータセットにMobileNetを適用する最も簡単な例です。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flower</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Flowerクラスをインスタンス化</span>
+<span class="n">flower</span> <span class="o">=</span> <span class="n">Flower</span><span class="p">(</span><span class="n">SupportedModel</span><span class="o">.</span><span class="n">MobileNet</span><span class="p">)</span>
+<span class="c1"># 学習 &amp; 評価</span>
+<span class="n">flower</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">datasets</span><span class="o">=</span><span class="n">SupportedDataset</span><span class="o">.</span><span class="n">HASC</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>また、AttentionモジュールやRNNモジュールを挿入したモデルやHand-crafted featuresを結合したモデルの実験を行うこともできます。モジュールは<code>SupportedSubmodule</code>で指定できます。</p>
+<p>下記に示すコードはWISDMデータセットに対してSEモジュールを挿入したMobileNetの実験とHand-crafted featuresを結合したMobileNetの実験を行う例です。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flower</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># SEモジュールを挿入したMobileNetの実験</span>
+<span class="n">flower</span> <span class="o">=</span> <span class="n">Flower</span><span class="p">(</span><span class="n">SupportedModel</span><span class="o">.</span><span class="n">MobileNet</span><span class="p">,</span> <span class="n">SupportedSubmodule</span><span class="o">.</span><span class="n">SENet</span><span class="p">)</span>
+<span class="n">flower</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">datasets</span><span class="o">=</span><span class="n">SupportedDataset</span><span class="o">.</span><span class="n">WISDM</span><span class="p">)</span>
+
+<span class="c1"># HCFを結合したMobileNetの実験</span>
+<span class="n">flower</span> <span class="o">=</span> <span class="n">Flower</span><span class="p">(</span><span class="n">SupportedModel</span><span class="o">.</span><span class="n">MobileNet</span><span class="p">,</span> <span class="n">concat_hcf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">flower</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">datasets</span><span class="o">=</span><span class="n">SupportedDataset</span><span class="o">.</span><span class="n">WISDM</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>flower.Flower</code>でサポートしているモデル、サブモジュール、データセットは<a href="../refs/flower/utils/">こちら</a>で確認できます。</p>
+</div>
                 
               
               
@@ -321,7 +432,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../refs/blossom/" class="md-footer__link md-footer__link--prev" aria-label="前: blossom" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="前: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -330,11 +441,26 @@
               <span class="md-footer__direction">
                 前
               </span>
-              blossom
+              Home
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../refs/flower/" class="md-footer__link md-footer__link--next" aria-label="次: flower" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              flower
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

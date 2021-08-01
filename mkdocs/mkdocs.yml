@@ -6,9 +6,9 @@ repo_url: https://github.com/haselab-dev/Hectic
 
 nav:
     - Home: index.md
+    - Quickstart: quickstart.md
     - flower: refs/flower.md
     - blossom: refs/blossom.md
-    - Quickstart: quickstart.md
 
 #plugins:
 #    - search
