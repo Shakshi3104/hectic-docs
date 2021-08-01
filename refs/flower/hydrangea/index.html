@@ -220,6 +220,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../" class="md-nav__link">
         flower
       </a>
@@ -237,21 +252,6 @@
     <li class="md-nav__item">
       <a href="../../blossom/" class="md-nav__link">
         blossom
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../quickstart/" class="md-nav__link">
-        Quickstart
       </a>
     </li>
   
@@ -294,6 +294,112 @@
     Attention
   </a>
   
+    <nav class="md-nav" aria-label="Attention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowerhydrangeaattentionsqueezeandexcite" class="md-nav__link">
+    flower.hydrangea.attention.SqueezeAndExcite
+  </a>
+  
+    <nav class="md-nav" aria-label="flower.hydrangea.attention.SqueezeAndExcite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowerhydrangeaattentionselectivekernel" class="md-nav__link">
+    flower.hydrangea.attention.SelectiveKernel
+  </a>
+  
+    <nav class="md-nav" aria-label="flower.hydrangea.attention.SelectiveKernel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowerhydrangeaattentionconvblockattention" class="md-nav__link">
+    flower.hydrangea.attention.ConvBlockAttention
+  </a>
+  
+    <nav class="md-nav" aria-label="flower.hydrangea.attention.ConvBlockAttention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowerhydrangeaattentionchannelattention" class="md-nav__link">
+    flower.hydrangea.attention.ChannelAttention
+  </a>
+  
+    <nav class="md-nav" aria-label="flower.hydrangea.attention.ChannelAttention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_3" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowerhydrangeaattentionspatialattention" class="md-nav__link">
+    flower.hydrangea.attention.SpatialAttention
+  </a>
+  
+    <nav class="md-nav" aria-label="flower.hydrangea.attention.SpatialAttention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_4" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -314,12 +420,15 @@
                 
                 
                 <h1 id="hydrangea">hydrangea</h1>
-<p><code>hydrangea</code> is a sub-framework for <code>flower</code>. In <code>hydrangea</code>, Attention modules and models that can insert the Attention module have been implemented. The models with attention are based on <a href="https://github.com/Shakshi3104/tfgarden"><code>tfgarden</code></a>.</p>
+<p><code>hydrangea</code> is a sub-framework for <code>flower</code>. In <code>hydrangea</code>, Attention modules and models that can insert the Attention module have been implemented. The models with attention are based on <a href="https://github.com/Shakshi3104/tfgarden"><code>tfgarden</code></a>. See <code>tfgarden</code> for reference papers of models other than Li2018.</p>
 <h2 id="models">Models</h2>
 <p><code>flower.hydrangea.models</code></p>
 <ul>
 <li><code>Li2018</code></li>
-<li><code>Li2018WithAttention</code></li>
+<li><code>Li2018WithAttention</code><ul>
+<li>Reference: <a href="https://www.mdpi.com/1424-8220/18/2/679">Comparison of Feature Learning Methods for Human Activity Recognition Using Wearable Sensors</a> (Sensors, Vol.18, No. 679, 2019)</li>
+</ul>
+</li>
 <li><code>VGG16WithAttention</code></li>
 <li><code>InceptionV3WithAttention</code></li>
 <li><code>ResNet18WithAttention</code></li>
@@ -340,6 +449,65 @@
 <li><code>SqueezeAndExcite</code></li>
 <li><code>SelectiveKernel</code></li>
 <li><code>ConvBlockAttention</code></li>
+</ul>
+<h3 id="flowerhydrangeaattentionsqueezeandexcite">flower.hydrangea.attention.SqueezeAndExcite</h3>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SqueezeAndExcite</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="n">se_ratio</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">block_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+Reference:</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1709.01507">Squeeze-and-Excitation Networks</a> (CVPR 2015)</li>
+</ul>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>filters: 出力フィルタサイズ</li>
+<li>se_ratio: 入力フィルタを絞る比率, 0 &lt; se_ratio &lt;= 1</li>
+<li>block_name: ブロック名</li>
+</ul>
+<h3 id="flowerhydrangeaattentionselectivekernel">flower.hydrangea.attention.SelectiveKernel</h3>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SelectiveKernel</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="n">block_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+Reference:</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1903.06586">Selective Kernel Networks</a> (CVPR 2019)</li>
+</ul>
+<h4 id="arguments_1">Arguments</h4>
+<ul>
+<li>filters: 出力フィルタサイズ</li>
+<li>block_name: ブロック名</li>
+</ul>
+<h3 id="flowerhydrangeaattentionconvblockattention">flower.hydrangea.attention.ConvBlockAttention</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ConvBlockAttention</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.125</span><span class="p">,</span> <span class="n">block_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Reference:</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1807.06521">CBAM: Convolutinal Block Attention Module</a> (ECCV 2018)</li>
+</ul>
+<h4 id="arguments_2">Arguments</h4>
+<ul>
+<li>filters: 出力フィルタサイズ</li>
+<li>ratio: 入力フィルタを絞る比率, 0 &lt; ratio &lt;= 1</li>
+<li>block_name: ブロック名</li>
+</ul>
+<h3 id="flowerhydrangeaattentionchannelattention">flower.hydrangea.attention.ChannelAttention</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ChannelAttention</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.125</span><span class="p">,</span> <span class="n">block_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="arguments_3">Arguments</h4>
+<ul>
+<li>filters: 出力フィルタサイズ</li>
+<li>ratio: 入力フィルタを絞る比率, 0 &lt; ratio &lt;= 1</li>
+<li>block_name: ブロック名</li>
+</ul>
+<h3 id="flowerhydrangeaattentionspatialattention">flower.hydrangea.attention.SpatialAttention</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SpatialAttention</span><span class="p">(</span><span class="n">block_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="arguments_4">Arguments</h4>
+<ul>
+<li>block_name: ブロック名</li>
 </ul>
                 
               
