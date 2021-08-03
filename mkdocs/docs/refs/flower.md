@@ -4,7 +4,7 @@
 - [datasets](flower/datasets.md)
 - [augmentation](flower/augmentation.md)
 - [features](flower/features.md)
-- [utils](flower/utils.md)
+- [options](flower/options.md)
 
 ## flower.hydrangea
 `hydrangea` is a sub-framework for `flower`.

@@ -1,9 +1,9 @@
-# flower.utils
+# flower.options
 
 ## SupportedModel
 
 ```python
-flower.utils.SupportedModel
+flower.options.SupportedModel
 ```
 
 - case `SimpleCNN`
@@ -41,9 +41,18 @@ SupportedModel.build_model(input_shape=(256, 3), classes=6, submodule: Supported
 #### Returns
 - model: tf.keras.models.Model
 
+### all_cases()
+```python
+SupportedModel.all_cases() -> list
+```
+モデルのリストを取得する
+
+#### Returns
+- models: list(SupportedModel), SupportedModelのリスト
+
 ## SupportedSubmodule
 ```python
-flower.utils.SupportedSubmodule
+flower.options.SupportedSubmodule
 ```
 
 
@@ -72,9 +81,19 @@ Attentionモジュールをビルドする (`SupportedModel.build_model()`内で
 #### Returns
 - module: flower.hydrangea.attention.BaseAttention
 
+
+### all_cases()
+```python
+SupportedSubmodule.all_cases() -> list
+```
+サブモジュールのリストを返す
+
+#### Returns
+- submoduels: list(SupportedSubmodule), SupportedSubmoduleのリスト
+
 ## SupportedDataset
 ```python
-flower.utils.SupportedDataset
+flower.options.SupportedDataset
 ```
 
 - case `HASC`

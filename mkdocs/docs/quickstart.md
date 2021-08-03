@@ -44,4 +44,4 @@ flower.fit(epochs=10, learning_rate=1e-3, batch=128, datasets=SupportedDataset.W
 ```
 
 !!! Note
-    `flower.Flower`でサポートしているモデル、サブモジュール、データセットは[こちら](refs/flower/utils.md)で確認できます。
+    `flower.Flower`でサポートしているモデル、サブモジュール、データセットは[こちら](refs/flower/options.md)で確認できます。
