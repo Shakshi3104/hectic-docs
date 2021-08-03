@@ -14,11 +14,11 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
-        <title>flower.utils - Hectic</title>
+        <title>flower.options - Hectic</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowerutils" class="md-skip">
+        <a href="#floweroptions" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              flower.utils
+              flower.options
             
           </span>
         </div>
@@ -324,6 +324,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#all_cases" class="md-nav__link">
+    all_cases()
+  </a>
+  
+    <nav class="md-nav" aria-label="all_cases()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -353,7 +373,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#returns_1" class="md-nav__link">
+  <a href="#returns_2" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all_cases_1" class="md-nav__link">
+    all_cases()
+  </a>
+  
+    <nav class="md-nav" aria-label="all_cases()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
     Returns
   </a>
   
@@ -401,14 +441,14 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/haselab-dev/Hectic/edit/master/docs/refs/flower/utils.md" title="編集" class="md-content__button md-icon">
+                  <a href="https://github.com/haselab-dev/Hectic/edit/master/docs/refs/flower/options.md" title="編集" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="flowerutils">flower.utils</h1>
+                <h1 id="floweroptions">flower.options</h1>
 <h2 id="supportedmodel">SupportedModel</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedModel</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">SupportedModel</span>
 </code></pre></div>
 </td></tr></table>
 <ul>
@@ -446,8 +486,17 @@
 <ul>
 <li>model: tf.keras.models.Model</li>
 </ul>
+<h3 id="all_cases">all_cases()</h3>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SupportedModel</span><span class="o">.</span><span class="n">all_cases</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+</td></tr></table>
+モデルのリストを取得する</p>
+<h4 id="returns_1">Returns</h4>
+<ul>
+<li>models: list(SupportedModel), SupportedModelのリスト</li>
+</ul>
 <h2 id="supportedsubmodule">SupportedSubmodule</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedSubmodule</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">SupportedSubmodule</span>
 </code></pre></div>
 </td></tr></table>
 <p>Attention modules</p>
@@ -469,12 +518,21 @@
 </code></pre></div>
 </td></tr></table>
 Attentionモジュールをビルドする (<code>SupportedModel.build_model()</code>内で利用される)</p>
-<h4 id="returns_1">Returns</h4>
+<h4 id="returns_2">Returns</h4>
 <ul>
 <li>module: flower.hydrangea.attention.BaseAttention</li>
 </ul>
+<h3 id="all_cases_1">all_cases()</h3>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">SupportedSubmodule</span><span class="o">.</span><span class="n">all_cases</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+</td></tr></table>
+サブモジュールのリストを返す</p>
+<h4 id="returns_3">Returns</h4>
+<ul>
+<li>submoduels: list(SupportedSubmodule), SupportedSubmoduleのリスト</li>
+</ul>
 <h2 id="supporteddataset">SupportedDataset</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedDataset</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">SupportedDataset</span>
 </code></pre></div>
 </td></tr></table>
 <ul>
@@ -520,10 +578,10 @@ Attentionモジュールをビルドする (<code>SupportedModel.build_model()</
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2b46852b.min.js"></script>
       
     
   </body>
