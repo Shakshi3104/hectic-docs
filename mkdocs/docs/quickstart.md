@@ -6,6 +6,7 @@
 Hectic (flower & blossom)は、下記のパッケージが必要です。
 
 - tensorflow >= 2.4
+- tensorflow-addons
 - [tfgarden](https://github.com/Shakshi3104/tfgarden): `pip install git+https://github.com/Shakshi3104/tfgarden.git`
 - [sensorutils](https://github.com/haselab-dev/sensorutils): `pip install git+https://github.com/haselab-dev/sensorutils.git`
 - numpy

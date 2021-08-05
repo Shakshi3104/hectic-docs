@@ -1,6 +1,6 @@
 # Hectic
 
-Welcome! This is the documentation of Hectic (flower🌻 and blossom🌸), last updated August 3, 2021.
+Welcome! This is the documentation of Hectic (flower🌻 and blossom🌸), last updated August 5, 2021.
 
 ---
 

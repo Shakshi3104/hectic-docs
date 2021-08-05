@@ -10,7 +10,7 @@
 
 ### Initializer
 ```python
-flower.experiements.architecture.Flower(model: flower.utils.SupportedModel, module: flower.utils.SupportedSubmodule = None, concat_hcf=False, result_dir="./results/", weight_dir="./weights/", data_dir="./data")
+flower.experiements.experiments.Flower(model: flower.utils.SupportedModel, module: flower.utils.SupportedSubmodule = None, concat_hcf=False, result_dir="./results/", weight_dir="./weights/", data_dir="./data")
 ```
 
 #### Arguments
