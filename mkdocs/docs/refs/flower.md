@@ -4,6 +4,7 @@
 - [datasets](flower/datasets.md)
 - [augmentation](flower/augmentation.md)
 - [features](flower/features.md)
+- [options](flower/options.md)
 - [utils](flower/utils.md)
 
 ## flower.hydrangea

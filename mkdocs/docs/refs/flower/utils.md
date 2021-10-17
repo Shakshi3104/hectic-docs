@@ -1,86 +1,44 @@
 # flower.utils
 
-## SupportedModel
+## utilities for experiments
 
-```python
-flower.utils.SupportedModel
+### flower.utils.set_seed
+
 ```
-
-- case `SimpleCNN`
-- case `VGG16`
-- case `InceptionV3`
-- case `ResNet18`
-- case `PyramidNet18`
-- case `Xception`
-- case `DenseNet121`
-- case `MobileNet`
-- case `MobileNetV2`
-- case `MobileNetV3Small`
-- case `NASNetMobile`
-- case `MnasNet`
-- case `EfficientNetB0`
-- case `EfficientNetLite0`
-
-
-#### Aliases
-`flower.SupportedModel`
-
-### build_model()
-```python
-SupportedModel.build_model(input_shape=(256, 3), classes=6, submodule: SupportedSubmodule = None, concat_hcf=False, num_features=3 * 25) -> tf.keras.models.Model
-```
-モデルをビルドする
-
-#### Arguments
-- input_shape: モデルのinput shape, デフォルト (256, 3)
-- classes: 出力クラス数, デフォルト 6
-- submodule: Optional(flower.utils.SupportedSubmodule), 挿入するサブモジュール
-- concat_hcf: Hand-crafted featuresを結合するかどうか
-- num_features: 結合するHCFの数, concat_hcf=Trueのときに有効
-
-#### Returns
-- model: tf.keras.models.Model
-
-## SupportedSubmodule
-```python
-flower.utils.SupportedSubmodule
+flower.utils.set_seed(seed=200)
 ```
 
 
-Attention modules
 
-- case `SENet`
-- case `SKNet`
-- case `CBAM`
+### flower.utils.get_timestamp
 
-RNN modules
-
-- case `GRU`
-- case `LSTM`
-- case `bi-LSTM`
-
-
-#### Aliases
-`flower.SupportedSubmodule`
-
-### module()
-```python
-SupportedSubmodule.module() -> flower.hydrangea.attention.BaseAttention
 ```
-Attentionモジュールをビルドする (`SupportedModel.build_model()`内で利用される)
-
-#### Returns
-- module: flower.hydrangea.attention.BaseAttention
-
-## SupportedDataset
-```python
-flower.utils.SupportedDataset
+flower.utils.get_timestamp()
 ```
 
-- case `HASC`
-- case `WISDM`
-- case `UCI`
-- case `All`
+### flower.utils.argument_parser
 
-#### Aliases
-`flower.SupportedDataset`
+```
+flower.utils.argument_parser()
+```
+
+### flower.utils.set_gpu_devices
+
+```
+flower.utils.set_gpu_devices(gpu_id=0)
+```
+
+マルチGPU環境で使用するGPUを指定する関数
+
+### flower.utils.write_machine_condition
+
+```
+flower.utils.write_machine_condition(gpu_id=0, output_dir="./outputs/")
+```
+
+### flower.utils.generate_suffix
+
+```
+flower.utils.generate_suffix(base, no_overwrite, dataset_id)
+```
+

@@ -2,9 +2,9 @@
 
 ## Dataset via `tf.data`
 
-### flower.datasets.load_hasc
+### flower.datasets.datasets.load_hasc
 ```python
-flower.datasets.load_hasc(batch=20, augmentation=False, extraction=False, shuffled_id=None, data_dir="./data/")
+flower.datasets.datasets.load_hasc(batch=20, augmentation=False, extraction=False, shuffled_id=None, valid=True, hcf_only=False, data_dir="./data/", drop_remainder=True)
 ```
 HASCデータセットを`tf.data`形式で読み込む。
 
@@ -17,15 +17,19 @@ Reference:
 - augmentation: データ拡張をするかどうか
 - extraction: 特徴量抽出をするかどうか
 - shuffled_id: シャッフルデータセットID
+- valid: 検証用データを使用するかどうか。Trueのとき、データセットをtrain:valid:testで分割する。Falseのとき、データセットをtrain(train+valid):testで分割する
+- hcf_only: 特徴量のみを返す
+- data_dir: データセットのディレクトリ
+- drop_remainder:  バッチサイズ以下のバッチを捨てるかどうか
 
 #### Returns
 - train_ds: tf.data.Dataset, 学習データセット
-- valid_ds: tf.data.Dataset, 検証データセット
+- valid_ds: tf.data.Dataset, 検証データセット, valid=Falseのときはtest_dsと同じもの
 - test_ds: tf.data.Dataset, テストデータセット
 
-### flower.datasets.load_uci
+### flower.datasets.datasets.load_uci
 ```python
-flower.datasets.load_uci(batch=20, augmentation=False, extraction=False, shuffled_id=None, data_dir="./data/")
+flower.datasets.datasets.load_uci(batch=20, augmentation=False, extraction=False, shuffled_id=None, valid=True, hcf_only=False, data_dir="./data/", drop_remainder=True)
 ```
 UCIデータセットを`tf.data`形式で読み込む。
 
@@ -39,16 +43,19 @@ Reference:
 - augmentation: データ拡張をするかどうか
 - extraction: 特徴量抽出をするかどうか
 - shuffled_id: シャッフルデータセットID
-- data_dir: データセットがあるディレクトリ
+- valid: 検証用データを使用するかどうか。Trueのとき、データセットをtrain:valid:testで分割する。Falseのとき、データセットをtrain(train+valid):testで分割する
+- hcf_only: 特徴量のみを返す
+- data_dir: データセットのディレクトリ
+- drop_remainder:  バッチサイズ以下のバッチを捨てるかどうか
 
 #### Returns
 - train_ds: tf.data.Dataset, 学習データセット
-- valid_ds: tf.data.Dataset, 検証データセット
+- valid_ds: tf.data.Dataset, 検証データセット, valid=Falseのときはtest_dsと同じもの
 - test_ds: tf.data.Dataset, テストデータセット
 
-### flower.datasets.load_wisdm
+### flower.datasets.datasets.load_wisdm
 ```python
-flower.datasets.load_wisdm(batch=20, augmentation=False, extraction=False, shuffled_id=None, data_dir="./data/")
+flower.datasets.datasets.load_wisdm(batch=20, augmentation=False, extraction=False, shuffled_id=None, valid=True, hcf_only=False, data_dir="./data/", drop_remainder=True)
 ```
 
 WISDMデータセットを`tf.data`形式で読み込む。
@@ -63,17 +70,20 @@ Reference:
 - augmentation: データ拡張をするかどうか
 - extraction: 特徴量抽出をするかどうか
 - shuffled_id: シャッフルデータセットID
-- data_dir: データセットがあるディレクトリ
+- valid: 検証用データを使用するかどうか。Trueのとき、データセットをtrain:valid:testで分割する。Falseのとき、データセットをtrain(train+valid):testで分割する
+- hcf_only: 特徴量のみを返す
+- data_dir: データセットのディレクトリ
+- drop_remainder:  バッチサイズ以下のバッチを捨てるかどうか
 
 #### Returns
 - train_ds: tf.data.Dataset, 学習データセット
-- valid_ds: tf.data.Dataset, 検証データセット
+- valid_ds: tf.data.Dataset, 検証データセット, valid=Falseのときはtest_dsと同じもの
 - test_ds: tf.data.Dataset, テストデータセット
 
 ## Dataset via numpy
 ### flower.datasets.load_hasc_from_pkl
 ```python
-flower.datasets.load_hasc_from_pkl(window_size=256, data_dir="./data/")
+flower.datasets.load.load_hasc_from_pkl(window_size=256, data_dir="./data/")
 ```
 HASCデータセットをpickleから読み込む。pickleファイルがない場合は、sensorutilsで生データから読み込み、pickleで書き出す。
 
@@ -92,7 +102,7 @@ HASCデータセットをpickleから読み込む。pickleファイルがない�
 
 ### flower.datasets.load_uci_from_pkl
 ```python
-flower.datasets.load_uci_from_pkl(data_dir="./data/")
+flower.datasets.load.load_uci_from_pkl(data_dir="./data/")
 ```
 UCIデータセットをpickleから読み込む。pickleファイルがない場合は、sensorutilsで生データから読み込み、pickleで書き出す。
 
@@ -110,7 +120,7 @@ UCIデータセットをpickleから読み込む。pickleファイルがない�
 
 ### flower.datasets.load_wisdm_from_pkl
 ```python
-flower.datasets.load_wisdm_from_pkl(window_size=256, data_dir="./data/")
+flower.datasets.load.load_wisdm_from_pkl(window_size=256, data_dir="./data/")
 ```
 WISDMデータセットをpickleから読み込む。pickleファイルがない場合は、sensorutilsで生データから読み込み、pickleで書き出す。
 
@@ -127,6 +137,6 @@ WISDMデータセットをpickleから読み込む。pickleファイルがない
 - y_test: np.ndarray, yのテストデータ
 
 ## Generate random subjects dataset
-### flower.datasets.generate_shuffled_hasc
-### flower.datasets.generate_shuffled_uci
-### flower.datasets.generate_shuffled_wisdm
+### flower.datasets.shuffle.generate_shuffled_hasc
+### flower.datasets.shuffle.generate_shuffled_uci
+### flower.datasets.shuffle.generate_shuffled_wisdm

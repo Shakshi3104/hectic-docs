@@ -71,14 +71,65 @@ flowerで使用する特徴量を抽出する関数
 
 ## tf.function
 `tf.data.Dataset.map()`で使う関数
+
+### flower.features.raw_and_extract
+
+```
+flower.features.raw_and_extract(x, y)
+```
+
+生データと特徴量を返す
+
+#### Arguments
+
+- x: channel-lastなセンサデータ, `shape=(batch_size, window_size, channel)`
+- y: xに対応するラベル
+
+#### Returns
+
+- (x, f), y: (生データ, 特徴量), ラベル
+
 ### flower.features.extract
 ```python
 flower.features.extract(x, y)
 ```
 
+特徴量を返す
+
 #### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(batch_size, window_size, 3)`
+
+- x: channel-lastなセンサデータ, `shape=(batch_size, window_size, channel)`
 - y: xに対応するラベル
 
 #### Returns
+- f, y: 特徴量, ラベル
+
+### flower.features.augemt_raw_and_extract
+
+```
+flower.features.augment_raw_and_extract(x, y)
+```
+
+データ拡張した生データと特徴量を返す
+
+#### Arguments
+
+- x: channel-lastなセンサデータ, `shape=(batch_size, window_size, channel)`
+- y: xに対応するラベル
+
+#### Returns
+
 - (x, f), y: (生データ, 特徴量), ラベル
+
+### flower.features.augment_extract
+
+```python
+flower.features.augment_extract(x, y)
+```
+
+データ拡張したデータに対する特徴量を返す
+
+#### Arguments
+
+- x: channel-lastなセンサデータ, `shape=(batch_size, window_size, channel)`
+- y: xに対応するラベル

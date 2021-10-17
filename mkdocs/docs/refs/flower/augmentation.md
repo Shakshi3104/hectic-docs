@@ -1,15 +1,14 @@
 # flower.augmentation
 
-## Data augmentation per instance
-input_shape = (window_size, 3)のデータに対するデータ拡張
-
+## Data augmentation
 ### flower.augmentation.flipping
 ```python
-flower.augmentation.flipping(x, overall=True)
+flower.augmentation.flipping(x, overall=True, axis=0)
 ```
 #### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(window_size, 3)`
+- x: channel-lastなセンサデータ, `shape=(window_size, channel)` or `shape=(batch_size, window_size, channel)`
 - overall: Trueのとき、全ての軸を同時に反転させる。Falseのとき、各軸ごとに反転させる。
+- axis: flipする軸
 
 #### Returns
 - x_new: flipしたx
@@ -19,32 +18,7 @@ flower.augmentation.flipping(x, overall=True)
 flower.augmentation.swapping(x)
 ```
 #### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(window_size, 3)`
-
-#### Returns
-- x_new: swapしたx
-
-
-## Data augmentation per batch
-input_shape = (batch_size, window_size, 3)のデータに対するデータ拡張
-
-### flower.augmentation.flipping_batch
-```python
-flower.augmentation.flipping_batch(x, overall=True)
-```
-#### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(batch_size, window_size, 3)`
-- overall: Trueのとき、全ての軸を同時に反転させる。Falseのとき、各軸ごとに反転させる。
-
-#### Returns
-- x_new: flipしたx
-
-### flower.augmentation.swapping_batch
-```python
-flower.augmentation.swapping_batch(x)
-```
-#### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(batch_size, window_size, 3)`
+- x: channel-lastなセンサデータ, `shape=(window_size, channel)` or `shape=(batch_size, window_size, channel)`, channel = 3 or 6なセンサデータのみサポート
 
 #### Returns
 - x_new: swapしたx
@@ -58,7 +32,7 @@ flower.augmentation.augment(x, y)
 ```
 
 #### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(window_size, 3)`
+- x: channel-lastなセンサデータ, `shape=(window_size, 3)`
 - y: xに対応するラベル
 
 #### Returns
@@ -70,7 +44,7 @@ flower.augmentation.augment_batch(x, y)
 ```
 
 #### Arguments
-- x: channel-lastな3軸センサデータ, `shape=(batch_size, window_size, 3)`
+- x: channel-lastなセンサデータ, `shape=(batch_size, window_size, 3)`
 - y: xに対応するラベル
 
 #### Returns
