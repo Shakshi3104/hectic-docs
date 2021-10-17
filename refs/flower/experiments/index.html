@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.1.7">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -42,8 +42,6 @@
     
     
       
-
-
     
     
   </head>
@@ -112,18 +110,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
+      <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -342,6 +336,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#leaf" class="md-nav__link">
+    Leaf
+  </a>
+  
+    <nav class="md-nav" aria-label="Leaf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases_1" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initializer_1" class="md-nav__link">
+    Initializer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bouquet" class="md-nav__link">
+    Bouquet
+  </a>
+  
+    <nav class="md-nav" aria-label="Bouquet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases_2" class="md-nav__link">
+    Aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initializer_2" class="md-nav__link">
+    Initializer
+  </a>
+  
+    <nav class="md-nav" aria-label="Initializer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -366,7 +427,23 @@
 <p><code>flower.Flower</code></p>
 <p><code>flower.experiments.Flower</code></p>
 <h3 id="initializer">Initializer</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">experiements</span><span class="o">.</span><span class="n">experiments</span><span class="o">.</span><span class="n">Flower</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedModel</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedSubmodule</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">concat_hcf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">result_dir</span><span class="o">=</span><span class="s2">&quot;./results/&quot;</span><span class="p">,</span> <span class="n">weight_dir</span><span class="o">=</span><span class="s2">&quot;./weights/&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">experiements</span><span class="o">.</span><span class="n">flower</span><span class="o">.</span><span class="n">Flower</span><span class="p">(</span>
+  <span class="n">model</span><span class="p">:</span> <span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">FlowerModel</span><span class="p">,</span> 
+  <span class="n">module</span><span class="p">:</span> <span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">SupportedSubmodule</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+  <span class="n">concat_hcf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+  <span class="n">result_dir</span><span class="o">=</span><span class="s2">&quot;./results/&quot;</span><span class="p">,</span> 
+  <span class="n">weight_dir</span><span class="o">=</span><span class="s2">&quot;./weights/&quot;</span><span class="p">,</span> 
+  <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span>
+  <span class="n">data_dir</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span>
+<span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h4 id="arguments">Arguments</h4>
@@ -376,10 +453,39 @@
 <li>concat_hcf: Hand-crafted featuresを結合するかどうか</li>
 <li>result_dir: 結果を保存するディレクトリパス</li>
 <li>weight_dir: モデルの重みを保存するディレクトリパス</li>
+<li>output_dir: 結果とモデルの重みを保存するディレクトリ、指定した場合<code>result_dir</code>と<code>weight_dir</code>は<code>output_dir</code>を元に生成される</li>
 <li>data_dir: データセットがあるディレクトリパス</li>
 </ul>
 <h3 id="flowerfit">flower.fit()</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Flower</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">augmentation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">num_trials</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">datasets</span><span class="p">:</span> <span class="n">SupportedDataset</span> <span class="o">=</span> <span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedDataset</span><span class="o">.</span><span class="n">HASC</span><span class="p">,</span> <span class="n">shuffled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">multi_gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Flower</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+  <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
+  <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> 
+  <span class="n">batch</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+  <span class="n">augmentation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+  <span class="n">num_trials</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+  <span class="n">datasets</span><span class="p">:</span> <span class="n">SupportedDataset</span> <span class="o">=</span> <span class="n">flower</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SupportedDataset</span><span class="o">.</span><span class="n">HASC</span><span class="p">,</span> 
+  <span class="n">shuffled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+  <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+  <span class="n">multi_gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+  <span class="n">valid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+  <span class="n">dataset_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+  <span class="n">callbacks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+  <span class="n">small</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h4 id="arguments_1">Arguments</h4>
@@ -392,6 +498,64 @@
 <li>shuffled: データセットの被験者をシャッフルするかどうか, デフォルト False</li>
 <li>seed: ランダムのシード</li>
 <li>multi_gpu: マルチGPUで学習するかどうか, デフォルト False</li>
+<li>valid: 検証用データを使うかどうか、Trueの場合、valid_dsとtest_dsは同じもの</li>
+<li>dataset_id: データセットID</li>
+<li>callbacks: Kerasのcallbackのリスト</li>
+<li>small: Trueの場合、HASCデータセットの実験で被験者数が少ない方を使用する</li>
+</ul>
+<h2 id="leaf">Leaf</h2>
+<p><code>Leaf</code> is a class for running experiments of Multi-layer perceptron with Hand-crafted features.</p>
+<h4 id="aliases_1">Aliases</h4>
+<p><code>flower.Leaf</code></p>
+<p><code>flower.experiments.Leaf</code></p>
+<h3 id="initializer_1">Initializer</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">experiements</span><span class="o">.</span><span class="n">leaf</span><span class="o">.</span><span class="n">Leaf</span><span class="p">(</span>
+  <span class="n">result_dir</span><span class="o">=</span><span class="s2">&quot;./results/&quot;</span><span class="p">,</span> 
+  <span class="n">weight_dir</span><span class="o">=</span><span class="s2">&quot;./weights/&quot;</span><span class="p">,</span> 
+  <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span>
+  <span class="n">data_dir</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="bouquet">Bouquet</h2>
+<p><code>Bouquet</code> is a class for running experiments of all <code>SupportedModel</code>.</p>
+<h4 id="aliases_2">Aliases</h4>
+<p><code>flower.Bouquet</code></p>
+<p><code>flower.experiments.Bouquet</code></p>
+<h3 id="initializer_2">Initializer</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">flower</span><span class="o">.</span><span class="n">experiements</span><span class="o">.</span><span class="n">leaf</span><span class="o">.</span><span class="n">Leaf</span><span class="p">(</span>
+  <span class="n">module</span><span class="p">:</span> <span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">SupportedSubmodule</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+  <span class="n">concat_hcf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+  <span class="n">result_dir</span><span class="o">=</span><span class="s2">&quot;./results/&quot;</span><span class="p">,</span> 
+  <span class="n">weight_dir</span><span class="o">=</span><span class="s2">&quot;./weights/&quot;</span><span class="p">,</span> 
+  <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span>
+  <span class="n">data_dir</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">,</span>
+  <span class="n">models</span><span class="p">:</span> <span class="p">[</span><span class="n">flower</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">FlowerModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="arguments_2">Arguments</h4>
+<ul>
+<li>module: Optional(flower.utils.SupportedSubmodule), モデルに挿入するモジュール. Noneの場合は挿入しない</li>
+<li>concat_hcf: Hand-crafted featuresを結合するかどうか</li>
+<li>result_dir: 結果を保存するディレクトリパス</li>
+<li>weight_dir: モデルの重みを保存するディレクトリパス</li>
+<li>output_dir: 結果とモデルの重みを保存するディレクトリ、指定した場合<code>result_dir</code>と<code>weight_dir</code>は<code>output_dir</code>を元に生成される</li>
+<li>data_dir: データセットがあるディレクトリパス</li>
+<li>models: 実験を行うモデルのリスト、<code>flower.options.FlowerModel</code>を継承したモデルの指定であれば利用可能、<code>None</code>のときは<code>flower.options.SupportedModel.all_cases()</code>を使う</li>
 </ul>
                 
               
@@ -428,10 +592,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
