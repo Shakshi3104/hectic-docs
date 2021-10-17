@@ -2,7 +2,6 @@
 
 - [experiments](blossom/experiments.md)
 - [options](blossom/options.md)
-- [utils](blossom/utils.md)
 
 ## blossom.wisteria
 

@@ -5,7 +5,6 @@
 - [augmentation](flower/augmentation.md)
 - [features](flower/features.md)
 - [options](flower/options.md)
-- [utils](flower/utils.md)
 
 ## flower.hydrangea
 `hydrangea` is a sub-framework for `flower`.
