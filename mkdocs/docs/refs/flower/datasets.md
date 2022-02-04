@@ -12,6 +12,12 @@ Reference:
 
 - [HASC Challenge: gathering large scale human activity corpus for the real-world activity understandings](https://dl.acm.org/doi/10.1145/1959826.1959853)
 
+#### Aliases
+
+`flower.datasets.load_hasc`
+
+`flower.datasets.datasets.load_hasc`
+
 #### Argments
 - batch: バッチサイズ
 - augmentation: データ拡張をするかどうか
@@ -37,6 +43,12 @@ Reference:
 
 - [A Public Domain Dataset for Human Activity Recognition Using Smartphones](https://www.mdpi.com/1424-8220/20/8/2200)
 - Dataset link: https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip
+
+#### Aliases
+
+`flower.datasets.load_uci`
+
+`flower.datasets.datasets.load_uci`
 
 #### Argments
 - batch: バッチサイズ
@@ -65,6 +77,12 @@ Reference:
 - [Activity Recognition using Cell Phone Accelerometers](https://dl.acm.org/doi/10.1145/1964897.1964918)
 - Dataset link: https://www.cis.fordham.edu/wisdm/includes/datasets/latest/WISDM_ar_latest.tar.gz
 
+#### Aliases
+
+`flower.datasets.load_wisdm`
+
+`flower.datasets.datasets.load_wisdm`
+
 #### Argments
 - batch: バッチサイズ
 - augmentation: データ拡張をするかどうか
@@ -80,8 +98,32 @@ Reference:
 - valid_ds: tf.data.Dataset, 検証データセット, valid=Falseのときはtest_dsと同じもの
 - test_ds: tf.data.Dataset, テストデータセット
 
+
+### flower.datasets.datasets.numpy_to_dataset
+
+```python
+numpy_to_dataset(x_train, y_train, x_valid, y_valid, x_test, y_test, batch=20, augmentation=False, extraction=False, hcf_only=False, valid=True, drop_remainder=False)
+```
+
+`np.ndarray`のデータセットを`tf.data`に変換する。
+
+#### Arguments
+
+- x_train: 学習データのx
+- y_train: 学習データのy
+- x_valid: 検証データのx
+- y_valid: 検証データのy
+- x_test: テストデータのx
+- y_test: テストデータのy
+- batch: バッチサイズ
+- augmentation: データ拡張をするかどうか
+- extraction: 特徴量抽出をするかどうか
+- hcf_only: 特徴量のみを返す
+- valid: 検証データとテストデータを同じにするかどうか
+- drop_remainder: バッチサイズに満たない要素を捨てるかどうか
+
 ## Dataset via numpy
-### flower.datasets.load_hasc_from_pkl
+### flower.datasets.load.load_hasc_from_pkl
 ```python
 flower.datasets.load.load_hasc_from_pkl(window_size=256, data_dir="./data/")
 ```
@@ -100,7 +142,7 @@ HASCデータセットをpickleから読み込む。pickleファイルがない�
 - y_test: np.ndarray, yのテストデータ
 
 
-### flower.datasets.load_uci_from_pkl
+### flower.datasets.load.load_uci_from_pkl
 ```python
 flower.datasets.load.load_uci_from_pkl(data_dir="./data/")
 ```
@@ -118,7 +160,7 @@ UCIデータセットをpickleから読み込む。pickleファイルがない�
 - y_test: np.ndarray, yのテストデータ
 
 
-### flower.datasets.load_wisdm_from_pkl
+### flower.datasets.load.load_wisdm_from_pkl
 ```python
 flower.datasets.load.load_wisdm_from_pkl(window_size=256, data_dir="./data/")
 ```
