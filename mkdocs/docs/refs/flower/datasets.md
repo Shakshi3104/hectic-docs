@@ -83,7 +83,7 @@ Reference:
 
 `flower.datasets.datasets.load_wisdm`
 
-#### Argments
+#### Arguments
 - batch: バッチサイズ
 - augmentation: データ拡張をするかどうか
 - extraction: 特徴量抽出をするかどうか

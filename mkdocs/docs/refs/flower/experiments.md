@@ -51,6 +51,7 @@ Flower.fit(
 #### Arguments
 - epochs: エポック数, デフォルト 100
 - learning_rate: 学習率, デフォルト 1e-3
+- batch: バッチサイズ, デフォルト 20
 - augmentation: データ拡張をするかどうか, デフォルト False
 - num_trials: 試行回数, デフォルト 1
 - datasets: SupportedDataset, 実験を実施するデータセット

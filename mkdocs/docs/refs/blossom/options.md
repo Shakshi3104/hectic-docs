@@ -2,7 +2,7 @@
 
 ## ManualModel
 
-```
+```python
 blossom.options.ManualModel
 ```
 
@@ -18,5 +18,21 @@ blossom.options.ManualModel
 
 ## SearchableConvBlock
 
+```python
+blossom.options.SearchableConvBlock
+```
+
+- case `Conv`
+- case `SeparableConv`
+- case `MBConv`
+- case `ExtremeInception`
+
 ## SkipOperation
 
+```python
+blossom.options.SkipOperation
+```
+
+- case `none`
+- case `pool`
+- case `identity`
