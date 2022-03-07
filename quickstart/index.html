@@ -267,6 +267,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#blossom" class="md-nav__link">
+    Blossomクラスを用いたモデル探索
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -345,6 +352,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#blossom" class="md-nav__link">
+    Blossomクラスを用いたモデル探索
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -364,11 +378,11 @@
 
 
 <h1 id="quick-start">Quick start</h1>
-<p>このページでは<code>flower</code>フレームワークの使い方を紹介します。</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>Hectic (flower &amp; blossom)は、下記のパッケージが必要です。</p>
 <ul>
 <li>tensorflow &gt;= 2.4</li>
+<li>keras-tuner</li>
 <li>tensorflow-addons</li>
 <li><a href="https://github.com/Shakshi3104/tfgarden">tfgarden</a>: <code>pip install git+https://github.com/Shakshi3104/tfgarden.git</code></li>
 <li><a href="https://github.com/haselab-dev/sensorutils">sensorutils</a>: <code>pip install git+https://github.com/haselab-dev/sensorutils.git</code></li>
@@ -417,6 +431,33 @@
 <p class="admonition-title">Note</p>
 <p><code>flower.Flower</code>でサポートしているモデル、サブモジュール、データセットは<a href="../refs/flower/options/">こちら</a>で確認できます。</p>
 </div>
+<h2 id="blossom">Blossomクラスを用いたモデル探索</h2>
+<p><code>blossom.Blossom</code>クラスを使うことで、HASCデータセットを使ったモデルの探索を行うことができます。
+Keras Tunerの<code>HyperModel</code>もしくは<code>blossom.experiments.searchable_models.SearchableModel</code>を継承したクラスに探索範囲を実装します。
+詳しくは、<a href="https://keras.io/guides/keras_tuner/getting_started/">Keras Tunerの公式リファレンス</a>も参照してください。</p>
+<p>実装済みの探索範囲の詳細は、<a href="../refs/blossom/search_spaces/">こちら</a>から参照できます。</p>
+<p>下記に、探索範囲Aを用いてモデル探索を行うコード例を示します。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">blossom</span> <span class="kn">import</span> <span class="n">Blossom</span>
+<span class="kn">from</span> <span class="nn">blossom.experiments.searchable_models</span> <span class="kn">import</span> <span class="n">BlossomSearchModelA</span>
+
+<span class="c1"># 探索範囲をセットアップ</span>
+<span class="n">hypermodel</span> <span class="o">=</span> <span class="n">BlossomSearchModelA</span><span class="p">()</span>
+
+<span class="c1"># Blossomクラスをインスタンス化</span>
+<span class="n">blossom</span> <span class="o">=</span> <span class="n">Blossom</span><span class="p">(</span><span class="n">hypermodel</span><span class="p">)</span>
+<span class="c1"># 探索</span>
+<span class="n">blossom</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="n">max_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span><span class="n">augmentation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dataset_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>
